@@ -1,0 +1,266 @@
+/* Trang checkout */
+.checkout {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+}
+
+/* Tiêu đề */
+.checkout-title {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Card */
+.checkout-card {
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.checkout-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Card Body */
+.checkout-card-body {
+    padding: 1.5rem;
+}
+
+/* Danh sách sản phẩm */
+.checkout-list-item {
+    font-size: 1rem;
+    color: #555;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.checkout-product-image {
+    width: 87px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.checkout-product-details {
+    flex-grow: 1;
+}
+
+.checkout-total {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-top: 15px;
+}
+
+/* Giảm giá */
+.checkout-discount {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Thông tin khách hàng */
+.checkout-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px; /* Thêm khoảng cách dưới mỗi dòng */
+  }
+  
+  .checkout-info strong {
+    font-weight: bold;
+  }
+  
+
+.checkout-btn {
+    background-color: #4CAF50;
+    border: none;
+    padding: 7px;
+    color: white;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #45a049;
+}
+
+/* Đảm bảo giao diện đẹp trên điện thoại */
+@media (max-width: 768px) {
+    .checkout-container {
+        padding: 15px;
+    }
+    .checkout-card {
+        margin-bottom: 15px;
+    }
+    .checkout-btn {
+        font-size: 1.1rem;
+    }
+}
+/* Phần tóm tắt tổng tiền */
+.checkout-summary {
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .checkout-total-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .checkout-total-label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .checkout-total-amount {
+    font-weight: bold;
+    color: #ff0000; /* Màu xanh cho số tiền */
+  }
+  
+  .checkout-total-item.discount .checkout-total-amount {
+    color: #e74c3c; /* Màu đỏ cho phần giảm giá */
+  }
+  
+  .checkout-total-item.final-total .checkout-total-amount {
+    color: #15b61d; /* Màu xanh cho tổng tiền sau giảm */
+    font-size: 1.1rem; /* Phóng to cho tổng tiền sau khi giảm */
+  }
+  /* Các mục yêu cầu đặc biệt của sản phẩm */
+.checkout-special-request {
+    font-size: 0.9rem;
+    color: #6c757d; /* Màu nhạt hơn */
+    margin-top: 5px;
+  }
+/* Căn chỉnh mã voucher và số lượng voucher */
+.checkout-voucher {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .voucher-name {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .voucher-count {
+    font-size: 0.9rem;
+    color: #28a745; /* Màu xanh lá cho số lượng còn lại */
+    font-weight: bold;
+  }
+  /* Modal styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .modal-container h3 {
+    margin-bottom: 20px;
+  }
+  
+  .modal-container p {
+    margin: 10px 0;
+  }
+  
+  .modal-container button {
+    margin-top: 20px;
+  }
+/* Checkout.css */
+
+/* Modal thông báo */
+.payment-success-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  /* Nội dung modal */
+  .payment-success-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInContent 0.5s forwards;
+  }
+  
+  /* Hiệu ứng fade-in cho modal */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Hiệu ứng fade-in cho nội dung của modal */
+  @keyframes fadeInContent {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .payment-success-content h3 {
+    color: green;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .payment-success-content p {
+    color: #333;
+    font-size: 16px;
+  }
+  
+  /* Hiệu ứng quay vòng */
+  .success-spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #4caf50;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin-bottom: 20px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

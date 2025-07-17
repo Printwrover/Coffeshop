@@ -1,0 +1,97 @@
+/* Gallery.css */
+
+/* Container for gallery */
+.gallery-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  /* Gallery heading */
+  .gallery-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  /* Wrapper that holds all cards */
+  .gallery-card-wrapper {
+    /* border: 2px solid #ccc; */
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  /* Gallery row layout */
+  .gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* This adds spacing between each image */
+  }
+  
+  /* Individual gallery item */
+  .gallery-item {
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+  }
+  
+  /* Card container */
+  .gallery-card {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    padding: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Gallery image styles */
+  .gallery-image {
+    width:70%;  /* Ensure the image takes up the full width of its container */
+    height: 120px; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    border-radius: 600px;
+  }
+  
+  /* Product name text style */
+  .gallery-name {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Responsive: For medium screens (tablet) */
+  @media (max-width: 768px) {
+    .gallery-row {
+      gap: 15px;
+    }
+  
+    .gallery-item {
+      max-width: 150px;
+    }
+  
+    .gallery-heading {
+      font-size: 1.6rem;
+    }
+  }
+  
+  /* Responsive: For small screens (mobile) */
+  @media (max-width: 576px) {
+    .gallery-row {
+      gap: 10px;
+    }
+  
+    .gallery-item {
+      max-width: 120px;
+    }
+  
+    .gallery-heading {
+      font-size: 1.4rem;
+    }
+  }
+  
